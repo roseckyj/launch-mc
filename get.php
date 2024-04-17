@@ -46,7 +46,7 @@ powershell "Expand-Archive '%CD%\\Minecraft\\temp\\java.zip' -DestinationPath '%
 echo Setting up...
 powershell "Invoke-webrequest -URI 'https://projects.xrosecky.cz/launchmc/account.php' -OutFile '%CD%\\Minecraft\\accounts.json'"
 powershell "Invoke-webrequest -URI 'https://projects.xrosecky.cz/launchmc/prismlauncher.php' -OutFile '%CD%\\Minecraft\\prismlauncher.cfg'"
-echo LastHostname=%ComputerName%>>'%CD%\\Minecraft\\prismlauncher.cfg'"
+powershell "[string]::Concat('LastHostname=',(Get-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters' -Name HostName).HostName) | Add-Content '%CD%\Minecraft\prismlauncher.cfg'"
 mkdir "%CD%\\Minecraft\\instances\\$version\\.minecraft"
 powershell "Invoke-webrequest -URI 'https://projects.xrosecky.cz/launchmc/instance.php?version=$version' -OutFile '%CD%\\Minecraft\\instances\\$version\\instance.cfg'"
 powershell "Invoke-webrequest -URI 'https://projects.xrosecky.cz/launchmc/mmc-pack.php?version=$version' -OutFile '%CD%\\Minecraft\\instances\\$version\\mmc-pack.json'"
