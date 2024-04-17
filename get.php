@@ -30,14 +30,12 @@ if not exist "%CD%\\Minecraft\\temp" mkdir "%CD%\\Minecraft\\temp"
 if not exist "%CD%\\Minecraft\\prismlauncher.exe" goto download
  
 :launch
-color 0a
 echo Prism Minecraft launcher found!
 echo Launching...
 start "PrismLauncher" "%CD%\\Minecraft\\prismlauncher.exe" --launch $version
 goto end
  
 :download
-color 0c
 echo Prism Minecraft launcher not found!
 echo Downloading...
 powershell "Import-Module BitsTransfer; Start-BitsTransfer 'https://github.com/PrismLauncher/PrismLauncher/releases/download/8.2/PrismLauncher-Windows-MSVC-Portable-8.2.zip' '%CD%\\Minecraft\\temp\\prism.zip'"
