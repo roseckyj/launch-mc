@@ -15,7 +15,7 @@ reducedDebugInfo:false
 showSubtitles:false
 directionalAudio:false
 touchscreen:false
-fullscreen:<? echo ($_GET["fullscreen"] === "on" ? "true" : "false"); ?>
+fullscreen:<? echo $_GET["fullscreen"]; ?>
 
 bobView:false
 toggleCrouch:false

@@ -4,7 +4,7 @@ $version = $_GET["version"];
 $language = $_GET["language"];
 $server = $_GET["server"];
 $ip = $_GET["ip"];
-$fullscreen = $_GET["fullscreen"];
+$fullscreen = $_GET["fullscreen"] == "on" ? "true" : "false";
 
 $content = <<<END
 @echo off

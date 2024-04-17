@@ -156,8 +156,7 @@
 
             <div class="input-group mt-3">
                 <div class="input-group-text">
-                    <input class="form-check-input mt-0" type="checkbox" checked aria-label="Add server config">
-                    <span class="ps-2">Add a server</span>
+                    <span>Minecraft Server</span>
                 </div>
                 <div class="form-floating">
                     <input type="text" class="form-control" id="server" name="server" placeholder="Server Name" value="Emcify Brno">
@@ -170,7 +169,7 @@
             </div>
 
             <div class="form-check mt-3">
-                <input class="form-check-input" type="checkbox" checked id="fullscreen" name="fullscen">
+                <input class="form-check-input" type="checkbox" checked id="fullscreen" name="fullscreen">
                 <label class="form-check-label" for="fullscreen">
                     Force fullscreen
                 </label>
